@@ -43,7 +43,7 @@ Returns nested array. Each module has:
 
 ```bash
 curl -s \
-  "${QTEST_BASE_URL}/api/v3/projects/${QTEST_PROJECT_ID}/modules?expand=descendants" \
+  "https://${QTEST_DOMAIN}.qtestnet.com/api/v3/projects/${QTEST_PROJECT_ID}/modules?expand=descendants" \
   -H "Authorization: Bearer ${QTEST_BEARER_TOKEN}" \
   | jq '.[] | {id, name, pid}'
 ```

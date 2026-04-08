@@ -76,7 +76,7 @@ POST /api/v3/projects/{projectId}/test-cases
 
 ```bash
 curl -s -X POST \
-  "${QTEST_BASE_URL}/api/v3/projects/${QTEST_PROJECT_ID}/test-cases?parentId=${MODULE_ID}" \
+  "https://${QTEST_DOMAIN}.qtestnet.com/api/v3/projects/${QTEST_PROJECT_ID}/test-cases?parentId=${MODULE_ID}" \
   -H "Authorization: Bearer ${QTEST_BEARER_TOKEN}" \
   -H "Content-Type: application/json" \
   -d '{

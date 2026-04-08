@@ -12,12 +12,12 @@ Push one test case into a qTest Manager module via `POST /api/v3/projects/{proje
 Read the `.env` file at the **project root** before anything else:
 
 ```
-QTEST_DOMAIN=mycompany.qtestnet.com
+QTEST_DOMAIN=mycompany
 QTEST_BEARER_TOKEN=eyJhbGci...
 QTEST_PROJECT_ID=12345
 ```
 
-Construct the base URL as `https://{QTEST_DOMAIN}`.
+Construct the base URL as `https://{QTEST_DOMAIN}.qtestnet.com`.
 If any values are missing, ask the user before proceeding. Do not continue with empty credentials.
 
 ## Step 2: Resolve Target Module

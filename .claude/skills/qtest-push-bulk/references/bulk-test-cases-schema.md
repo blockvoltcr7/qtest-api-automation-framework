@@ -107,7 +107,7 @@ Keep under **500 test logs** per request. Split into multiple requests for large
 
 ```bash
 curl -s -X POST \
-  "${QTEST_BASE_URL}/api/v3/projects/${QTEST_PROJECT_ID}/auto-test-logs?type=automation" \
+  "https://${QTEST_DOMAIN}.qtestnet.com/api/v3/projects/${QTEST_PROJECT_ID}/auto-test-logs?type=automation" \
   -H "Authorization: Bearer ${QTEST_BEARER_TOKEN}" \
   -H "Content-Type: application/json" \
   -d '{

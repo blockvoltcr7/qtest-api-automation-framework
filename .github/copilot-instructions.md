@@ -7,12 +7,12 @@ This project automates interactions with the qTest Manager v3 REST API. Use thes
 The project root `.env` file contains:
 
 ```
-QTEST_DOMAIN=mycompany.qtestnet.com
+QTEST_DOMAIN=mycompany
 QTEST_BEARER_TOKEN=eyJhbGci...
 QTEST_PROJECT_ID=12345
 ```
 
-**Always** load credentials from `.env` using `python-dotenv` (Python) or `dotenv` (Node). Never hardcode credentials. The base URL is constructed as `https://{QTEST_DOMAIN}`.
+`QTEST_DOMAIN` is the subdomain only — no `https://`, no `.com`. **Always** load credentials from `.env` using `python-dotenv` (Python) or `dotenv` (Node). Never hardcode credentials. The base URL is constructed as `https://{QTEST_DOMAIN}.qtestnet.com`.
 
 ### Python pattern
 
@@ -22,7 +22,7 @@ import os
 
 load_dotenv()
 
-BASE_URL = f"https://{os.getenv('QTEST_DOMAIN')}"
+BASE_URL = f"https://{os.getenv('QTEST_DOMAIN')}.qtestnet.com"
 TOKEN = os.getenv("QTEST_BEARER_TOKEN")
 PROJECT_ID = os.getenv("QTEST_PROJECT_ID")
 
